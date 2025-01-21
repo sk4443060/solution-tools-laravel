@@ -1,0 +1,43 @@
+// COMPOSER ERROR ///////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------------------
+Shubham Kumar@LAPTOP MINGW64 /e/Projects/Top Global Trip/git-connected/admin-panel (main)
+$ php artisan serve
+PHP Warning:  require(E:\Projects\Top Global Trip\git-connected\admin-panel/vendor/autoload.php): Fai
+led to open stream: No such file or directory in E:\Projects\Top Global Trip\git-connected\admin-panel\artisan on line 9
+
+Warning: require(E:\Projects\Top Global Trip\git-connected\admin-panel/vendor/autoload.php): Failed t
+o open stream: No such file or directory in E:\Projects\Top Global Trip\git-connected\admin-panel/vendor/autoload.php\art
+isan on line 9
+PHP Fatal error:  Uncaught Error: Failed opening required 'E:\Projects\Top Global Trip\git-connected\admin-panel/vendor/autoload.php' (include_path='E:\Installed Software\xampp1\xampp\php\PEAR') in E:\Projects\Top Glob
+al Trip\artisan:9
+Stack trace:
+#0 {main}
+  thrown in E:\Projects\Top Global Trip\git-connected\admin-panel\artisan on line 9
+
+Fatal error: Uncaught Error: Failed opening required 'E:\Projects\Top Global Trip\git-connected\admin-panel/vendor/autoload.php' (include_path='E:\Installed Software\xampp1\xampp\php\PEAR') in E:\Projects\Top Global Tr
+ip\git-connected\admin-panel\artisan:9
+Stack trace:
+#0 {main}
+  thrown in E:\Projects\Top Global Trip\admin-panel\artisan on line 9
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  SOLUTION  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+STEP: 01. Check if Composer is Installed
+          composer --version (If it is not installed, download and install it from getcomposer.org.)
+
+STEP: 02. Navigate to your project directory:
+          composer install
+
+STEP: 03. Check for the vendor Directory (After running composer install, the vendor directory and vendor/autoload.php file should be created.)
+
+
+// MIGRATE DB ///////////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------------------
+$ php artisan migrate
+
+// SETTING APP KEY //////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------------------
+$ php artisan key:generate
+
+// RUN PROJECT //////////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------------------
+$ php artisan serve
